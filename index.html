@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- CDN Toastify -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"
+    />
+    <!-- CDN SweetAlert -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.22/dist/sweetalert2.min.css"
+    />
+    <!-- CDN FontAwesome -->
+    <!-- Bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    />
+    <!-- CSS MAIN -->
+    <link rel="stylesheet" href="./css/styles.css" />
+    <title>Gestor De Turnos | Añadir</title>
+  </head>
+  <body>
+    <div class="contenedor">
+      <nav id="navIndex">
+        <div class="imgContainer">
+          <img src="./img/logo new.png" alt="" />
+        </div>
+        <ul>
+          <li>
+            <a href="#"
+              ><button class="btn btnNav btnActivo">Añadir Turnos</button></a
+            >
+          </li>
+          <li>
+            <a href="./pages/seccionTurnos.html"
+              ><button class="btn btnNav">Gestionar Turnos</button></a
+            >
+          </li>
+        </ul>
+      </nav>
+      <main id="mainIndex">
+        <div class="h1Container">
+          <h1>Agrega Un Turno!</h1>
+        </div>
+        <div class="formContainer">
+          <form action="">
+            <div class="inputContainer">
+              <label>Nombre y Apellido</label>
+              <input
+                id="nombreInput"
+                type="text"
+                placeholder="Ej: Victor Molina"
+              />
+            </div>
+            <div class="inputContainer">
+              <label>Numero de Contacto</label>
+              <input
+                id="numTelInput"
+                type="text"
+                placeholder="Ej: 2964123456"
+              />
+            </div>
+            <div class="inputContainer">
+              <p>Motivo:</p>
+              <select id="motivoInput" class="motivoIndex">
+                <option>---</option>
+                <option>Consulta</option>
+                <option>Presupuesto</option>
+                <option>Reunion de pago</option>
+                <option>Asesoramiento</option>
+              </select>
+            </div>
+            <div class="inputContainer">
+              <label>Fecha</label>
+              <input type="date" name="" id="fechaInput" />
+            </div>
+            <div class="inputContainer">
+              <label>Hora</label>
+              <input type="time" name="" id="horaInput" />
+            </div>
+            <div class="btnEnviar">
+              <button id="enviarTurno" class="btn btn-success">
+                Enviar Turno
+              </button>
+            </div>
+          </form>
+        </div>
+      </main>
+    </div>
+    <!-- CDN Luxon -->
+    <script src="https://cdn.jsdelivr.net/npm/luxon@3.4.0/build/global/luxon.min.js"></script>
+    <!-- CDN toastify -->
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/toastify-js"
+    ></script>
+    <!-- CDN sweetAlert -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.22/dist/sweetalert2.all.min.js"></script>
+    <!-- BOOTSTRAP -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+      crossorigin="anonymous"
+    ></script>
+    <!-- JS MAIN -->
+    <script src="./js/main.js"></script>
+  </body>
+</html>

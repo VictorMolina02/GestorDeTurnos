@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- CDN Toastify -->
+        <link
+        rel="stylesheet"
+        type="text/css"
+        href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"
+      />
+      <!-- CDN SweetAlert -->
+      <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.22/dist/sweetalert2.min.css"
+      />
+      <!-- GOOGLE FONTS -->
+      <!-- ICONOS -->
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+          <!-- FONTAWESOME -->
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+      <!-- Bootstrap -->
+      <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+        crossorigin="anonymous"
+      />
+      <!-- CSS MAIN -->
+    <link rel="stylesheet" href="../css/styles.css" />
+    <title>Gestor de Turnos | Gestionar</title>
+  </head>
+  <body>
+    <div class="contenedor">
+      <nav id="navIndex">
+        <div class="imgContainer">
+          <img src="../img/logo new.png" alt="" />
+        </div>
+        <ul>
+          <li>
+            <a href="../index.html"
+              ><button class="btn btnNav">Añadir Turnos</button></a
+            >
+          </li>
+          <li>
+            <a href="#"
+              ><button class="btn btnNav btnActivo">Gestionar Turnos</button></a
+            >
+          </li>
+        </ul>
+      </nav>
+      <main id="mainGestionar">
+        <div class="h1GestionarContainer">
+          <h1>Turnos Programados</h1>
+        </div>
+        <section class="buscadorContainer">
+            <div class="input-group input_y_icono">
+              <span class="input-group-text bg-dark" id="basic-addon1"><i class="fa-solid fa-magnifying-glass" style="color: #ffffff;"></i></span>
+              <input type="text" id="buscadorTurnos" class="form-control" placeholder="Buscar turno..." aria-label="Username" aria-describedby="basic-addon1">
+            </div>
+            <div class="input-group input_y_icono">
+              <select id="motivoBuscador" class="motivoGestor">
+                <option disabled selected>Busqueda por motivo...</option>
+                <option value="---">---</option>
+                <option value="Consulta">Consulta</option>
+                <option value="Presupuesto">Presupuesto</option>
+                <option value="Reunion de pago">Reunion de pago</option>
+                <option value="Asesoramiento">Asesoramiento</option>
+              </select>
+            </div>
+            <div class="input-group input_y_icono">
+              <span class="input-group-text bg-dark" id="basic-addon1"><i class="fa-solid fa-magnifying-glass" style="color: #ffffff;"></i></span>
+              <input type="date" id="buscadorFechas" class="form-control" placeholder="Buscar turno..." aria-label="Username" aria-describedby="basic-addon1">
+            </div>
+        </section>
+        <section id="tablaTurnos">
+          <table>
+            <thead>
+              <tr>
+                <th class="encabezado">Nombre</th>
+                <th class="encabezado">Numero de Contacto</th>
+                <th class="encabezado">Motivo</th>
+                <th class="encabezado">Fecha</th>
+                <th class="encabezado">Horario</th>
+                <th class="encabezado" id="btnEliminar">
+                  <button id="borrarTodo" class="btn btn-danger">
+                    <span class="material-symbols-outlined">
+                      delete_sweep
+                    </span>
+                  </button>
+                </th>
+              </tr>
+            </thead>
+            <tbody id="turnosContainer"></tbody>
+          </table>
+        </section>
+        <div class="botonRellenarContainer"><button id="btnRellenarTabla" class="btn btnNav">Rellenar</button></div>
+      </main>
+    </div>
+        <!-- CDN Luxon -->
+        <script src="https://cdn.jsdelivr.net/npm/luxon@3.4.0/build/global/luxon.min.js"></script>
+        <!-- CDN toastify -->
+        <script
+          type="text/javascript"
+          src="https://cdn.jsdelivr.net/npm/toastify-js"
+        ></script>
+        <!-- CDN sweetAlert -->
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.22/dist/sweetalert2.all.min.js"></script>
+        <!-- BOOTSTRAP -->
+        <script
+          src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+          crossorigin="anonymous"
+        ></script>
+        <!-- JS MAIN -->
+        <script src="../js/seccionTurnos.js"></script>
+      </body>
+  </body>
+</html>
