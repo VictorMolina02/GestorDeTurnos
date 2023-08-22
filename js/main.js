@@ -8,6 +8,7 @@ class AgregarTurno {
     this.contenedorTurnos = this.cargarLocalStorage();
     this.enviarTurnos();
   }
+
   agregarTurno(e) {
     e.preventDefault();
     const DateTime = luxon.DateTime;
@@ -49,8 +50,14 @@ class AgregarTurno {
         },
       }).showToast();
       this.guardarStorage(this.contenedorTurnos);
+      this.nombre.value = "";
+      this.fecha.value = "";
+      this.horario.value = "";
+      this.motivo.value = "---";
+      this.numCelular.value = "";
     }
   }
+
   swalFireError(mensajeDeError) {
     Swal.fire({
       title: "Error!",
@@ -58,23 +65,21 @@ class AgregarTurno {
       icon: "error",
     });
   }
+
   cargarLocalStorage() {
     const turnos_en_JSON = localStorage.getItem("listaDeTurnos");
     return turnos_en_JSON ? JSON.parse(turnos_en_JSON) : [];
   }
+
   guardarStorage(turnos) {
     let turnos_en_JSON = JSON.stringify(turnos);
     localStorage.setItem("listaDeTurnos", turnos_en_JSON);
   }
+
   enviarTurnos() {
     let btnEnviar = document.getElementById("enviarTurno");
     btnEnviar.addEventListener("click", (e) => {
       this.agregarTurno(e);
-      this.nombre.value = "";
-      this.fecha.value = "";
-      this.horario.value = "";
-      this.motivo.value = "---";
-      this.numCelular.value = "";
     });
   }
 }
