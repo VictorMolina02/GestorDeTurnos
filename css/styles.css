@@ -214,14 +214,19 @@ td {
 
 @media screen and (max-width: 1024px) {
   /* index */
+  h1 {
+    font-size: 20px;
+  }
   #mainIndex {
     height: 100vh;
   }
   form {
-    height: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
   }
   .formContainer {
-    height: 100vh;
+    height: 520px;
   }
   label,
   p {
@@ -273,5 +278,8 @@ td {
   }
   .h1GestionarContainer {
     margin-top: 20px;
+  }
+  .formContainer form {
+    height: 100%;
   }
 }
